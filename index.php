@@ -20,17 +20,17 @@
         <center>
             <div class="row">
                 <div class="column3">
-                    <a href="visitors.php"><img src="includes/user_icon.png" alt="Visitor" height="200"></a><br/>
+                    <a href="visitors.php"><img src="includes/visit.png" alt="Visitor" height="200"></a><br/>
                     Visitor<br/><br/>
                 </div>
 
                 <div class="column3">
-                    <a href="users.php"><img src="includes/user_icon.png" alt="User" height="200"></a><br/>
+                    <a href="users.php"><img src="includes/user.png" alt="User" height="200"></a><br/>
                     User<br/><br/>
                 </div>
 
                 <div class="column3">
-                    <a href="clients.php"><img src="includes/user_icon.png" alt="CLient" height="200"></a><br/>
+                    <a href="clients.php"><img src="includes/client.png" alt="CLient" height="200"></a><br/>
                     Client<br/>
                 </div>
             </div>

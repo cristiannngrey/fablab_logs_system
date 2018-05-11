@@ -13,7 +13,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="https://www.fablabs.io/labs/fablabbohol"><img src="includes/logo.jpg" alt="FabLab Bohol" height="50"></a>
+            <li><a href="index.php"><img src="includes/logo.jpg" alt="FabLab Bohol" height="50"></a>
 			</li>
         </ul>
     </nav>

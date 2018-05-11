@@ -1,4 +1,5 @@
 <?php
+
     //get value parse from form
     $id_num = $_POST['v_idnum'];
     $purpose = $_POST['v_purpose'];
@@ -25,7 +26,8 @@
 
         }
     } else {
-        echo "You're not registered yet";
+        $conn->close();
+        header("Location: ../reg_first.php");
     }
-    $conn->close();
 ?>
+    
