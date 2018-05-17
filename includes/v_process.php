@@ -14,13 +14,13 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     
-    $sql1 = "SELECT * from registration where id = $id_num";
-    $result = $conn->query($sql1);
+    $sql_v = "SELECT * from registration where id = $id_num";
+    $result_v = $conn->query($sql_v);
     $push_visitor = "INSERT INTO visitor (v_id, v_purpose, v_date) VALUES ($id_num, '$purpose', now())";
 
-    if ($result->num_rows > 0) {
+    if ($result_v->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
+        while($row = $result_v->fetch_assoc()) {
             echo "Welcome ".$id_num;
             $conn->query($push_visitor);
         }

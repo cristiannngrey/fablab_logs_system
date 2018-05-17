@@ -1,12 +1,12 @@
 <?php
 
     //get value parse from form
-    $id_num = $_POST['c_idnum'];
-    $purpose = $_POST['c_purpose'];
+    $id_num_c = $_POST['c_idnum'];
+    $purpose_c = $_POST['c_purpose'];
 
     //to prevent mysql injection
-    $id_num = stripcslashes($id_num);
-    $purpose = stripcslashes($purpose);
+    $id_num_c = stripcslashes($id_num_c);
+    $purpose_c = stripcslashes($purpose_c);
 
     //connect to the server
     $conn = new mysqli("localhost", "root", "", "fablab_logs_system");
@@ -14,16 +14,15 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     
-    $sql1 = "SELECT * from registration where id = $id_num";
-    $result = $conn->query($sql1);
-    $push_visitor = "INSERT INTO visitor (c_id, c_purpose, c_date) VALUES ($id_num, '$purpose', now())";
+    $sql_c = "SELECT * from registration where id = $id_num_c";
+    $result_c = $conn->query($sql_c);
+    $push_client = "INSERT INTO clients (c_id, c_purpose, c_date) VALUES ($id_num_c, '$purpose_c', now())";
 
-    if ($result->num_rows > 0) {
+    if ($result_c->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "Welcome ".$id_num;
-            $conn->query($push_visitor);
-
+        while($row = $result_c->fetch_assoc()) {
+            echo "Welcome ".$id_num_c;
+            $conn->query($push_client);
         }
     } else {
         header("Location: ../reg_first.php");

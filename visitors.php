@@ -12,7 +12,7 @@
 </head>
 <body>
     <center>
-        <h1>Welcome Visitor</h1>
+        <h1>Welcome, thanks for visiting</h1>
         Please scan your QR Code
         <div class="center">
             <form action="includes/v_process.php" method="POST">

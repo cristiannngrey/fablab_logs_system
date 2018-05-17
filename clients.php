@@ -12,10 +12,10 @@
 </head>
 <body>
     <center>
-        <h1>Welcome Visitor</h1>
+        <h1>How's your day?</h1>
         Please scan your QR Code
         <div class="center">
-            <form action="includes/v_process.php" method="POST">
+            <form action="includes/c_process.php" method="POST">
             <p>
                 <label>QR Code ID:</label>
                 <input type="text" id="c_idnum" name="c_idnum" />
