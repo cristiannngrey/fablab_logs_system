@@ -14,7 +14,16 @@
         VALUES ('$firstname', '$lastname', '$agency_address', '$contact_num', '$email')";
 
         if ($conn->query($sql) === TRUE) {            
-            echo "New record created successfully";
+            $last_id = $conn->insert_id;
+
+            $pad_length = 6;
+            $pad_char = 0;
+            $str_type = 'd';
+
+            $format = "%{$pad_char}{$pad_length}{$str_type}";
+            $id_str = sprintf($format, $last_id	);
+            echo "New record created successfully. <br>
+                  Thank you for Registering. Your QR ID is: " . $id_str;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

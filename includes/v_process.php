@@ -16,7 +16,7 @@
     
     $sql_v = "SELECT * from registration where id = $id_num";
     $result_v = $conn->query($sql_v);
-    $push_visitor = "INSERT INTO visitor (v_id, v_purpose, v_date) VALUES ($id_num, '$purpose', now())";
+    $push_visitor = "INSERT INTO visitors (v_id, v_purpose, v_date) VALUES ($id_num, '$purpose', now())";
 
     if ($result_v->num_rows > 0) {
         // output data of each row
