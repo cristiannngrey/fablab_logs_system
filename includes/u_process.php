@@ -22,8 +22,9 @@
 
     if ($result_u->num_rows > 0) {
         // output data of each row
+        //enhance this notificatio
         while($row = $result_u->fetch_assoc()) {
-            echo "Welcome ".$id_num_u;
+            echo "Welcome $row[firstname]<br>";//.$id_num_u;
             echo "Connection good";
             $conn->query($push_user);
         }

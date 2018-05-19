@@ -22,6 +22,9 @@
 
             $format = "%{$pad_char}{$pad_length}{$str_type}";
             $id_str = sprintf($format, $last_id	);
+
+            //enhance this code
+            //add interactive notification
             echo "New record created successfully. <br>
                   Thank you for Registering. Your QR ID is: " . $id_str;
         } else {

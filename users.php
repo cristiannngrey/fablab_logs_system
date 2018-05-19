@@ -1,5 +1,6 @@
 <?php
-  include 'header.php';
+    $pageTitle = "USER";
+    include 'header.php';
 ?>
 
 <!DOCTYPE html>
