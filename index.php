@@ -1,21 +1,13 @@
 <?php
 	include 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-</head>
-
-<body>
     <div class="center">
         <center><h1>WELCOME TO FABLAB!</h1></center><br>
         Please select one:
-        <div class="go_right"><a href="register.php">Register</a></div>
+        <div class="go_right">
+            <a href="register.php">Register</a> |
+            <a href="admin.php">Admin</a>
+        </div>
         <br><hr><br><br>
         <center>
             <div class="row">

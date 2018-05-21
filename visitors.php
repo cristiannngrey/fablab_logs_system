@@ -32,7 +32,7 @@
             <form action="includes/v_process.php" method="POST">
             <p>
                 <label>QR Code ID:</label>
-                <input type="text" id="v_idnum" name="v_idnum" />
+                <input type="text" id="v_idnum" name="v_idnum" readonly/>
                 <br/>
                 <label>Purpose of Visit:</label>
                 <input type="text" id="v_purpose" name="v_purpose" />
