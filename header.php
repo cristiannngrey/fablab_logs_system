@@ -26,7 +26,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.php"><img src="includes/logo.png" alt="FabLab Bohol" height="50"></a>
+            <li><a href="index.php"><img src="includes/logo.png" alt="FabLab Bohol" height="55"></a>
 			</li>
         </ul>
     </nav>
