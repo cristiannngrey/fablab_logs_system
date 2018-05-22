@@ -2,7 +2,6 @@
     $pageTitle = "VISITOR";
     include 'header.php';
 ?>
-
     <center>
         <h1>Welcome, thanks for visiting</h1>
         Please scan your QR Code
@@ -22,13 +21,11 @@
                 }).catch(function (e) {
                   console.error(e);
                 });
-
                 scanner.addListener('scan', function(content, image){
                     var v_idnum = document.getElementById("v_idnum");
                     v_idnum.value = content;
                 });
               </script>
-
             <form action="includes/v_process.php" method="POST">
             <p>
                 <label>QR Code ID:</label>

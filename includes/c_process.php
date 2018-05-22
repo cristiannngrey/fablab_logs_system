@@ -24,6 +24,7 @@
             echo "Welcome ".$id_num_c;
             $conn->query($push_client);
         }
+        header("Location: ../succ_log.php");
     } else {
         header("Location: ../reg_first.php");
     }

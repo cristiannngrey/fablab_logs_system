@@ -1,4 +1,5 @@
 <?php
+    $pageTitle = "ADMIN";
 	include 'header.php';
 ?>
     <div class="center">

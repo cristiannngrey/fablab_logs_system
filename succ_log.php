@@ -3,6 +3,9 @@
 	include 'header.php';
 ?>
     <div class="center">
+        <script>
+        alert("Welcome to FABLAB BOHOL!"); 
+    </script> 
         <center><h1>WELCOME TO FABLAB!</h1></center><br>
         Please select one:
         <div class="go_right">

@@ -24,6 +24,7 @@
             echo "Welcome ".$id_num;
             $conn->query($push_visitor);
         }
+        header("Location: ../succ_log.php");
     } else {
         header("Location: ../reg_first.php");
     }

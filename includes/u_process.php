@@ -28,6 +28,7 @@
             echo "Connection good";
             $conn->query($push_user);
         }
+        header("Location: ../succ_log.php");
     } else {
         header("Location: ../reg_first.php");
     }

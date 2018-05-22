@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-
     box-sizing: border-box;
 }
 
@@ -118,6 +117,12 @@ button_red {
     margin-right: 5px;
 }
 
+.go_right1 {
+    float: right;
+    margin-right: 0px;
+    margin-top: -19px;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -149,6 +154,7 @@ button_red {
 .closebtn:hover {
     color: black;
 }
+
 #logs {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -170,4 +176,52 @@ button_red {
     text-align: left;
     background-color: #4CAF50;
     color: white;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    float: right;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px;  
 }
