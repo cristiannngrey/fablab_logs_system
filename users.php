@@ -3,9 +3,9 @@
     include 'header.php';
 ?>
     <center>
-        <h1>Hello, got some amazing ideas today?</h1>
+        <h1>Hello, got some amazing ideas today?</h1><hr>
+        <div class="column">
         Please scan your QR Code
-        <div class="center">
         <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -25,8 +25,10 @@
                     var u_idnum = document.getElementById("u_idnum");
                     u_idnum.value = content;
                 });
-              </script>
+            </script>
             <form action="includes/u_process.php" method="POST">
+        </div>
+        <div class="column">
             <p>
                 <label>QR Code ID:</label>
                 <input type="text" id="u_idnum" name="u_idnum" readonly />
