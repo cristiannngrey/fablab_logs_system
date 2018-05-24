@@ -2,11 +2,11 @@
     $pageTitle = "CLIENT";
     include 'header.php';
 ?>
-    <center>
+     <center>
         <h1>How's your day?</h1>
-        Please scan your QR Code
-        <div class="center">
-        <video id="preview"></video>
+        <div class="column">
+            Please scan your QR Code
+            <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
                 scanner.addListener('scan', function (content) {
@@ -25,18 +25,20 @@
                     var c_idnum = document.getElementById("c_idnum");
                     c_idnum.value = content;
                 });
-              </script>
+            </script>
+        </div>
+        <div class="column">
             <form action="includes/c_process.php" method="POST">
-            <p>
-                <label>QR Code ID:</label>
-                <input type="text" id="c_idnum" name="c_idnum" readonly/>
-                <br/>
-                <label>Purpose:</label>
-                <input type="text" id="c_purpose" name="c_purpose" />
-            </p>
-                <input type="submit" id="btn" value="  OK  " />
-            <p>                
-        </form>
+                <p>
+                    <label>QR Code ID:</label>
+                    <input type="text" id="c_idnum" name="c_idnum" readonly/>
+                    <br/>
+                    <label>Purpose:</label>
+                    <input type="text" id="c_purpose" name="c_purpose" />
+                </p>
+                    <input type="submit" id="btn" value="  OK  " />
+                <p>               
+            </form>
         </div>
     </center>
 </body>

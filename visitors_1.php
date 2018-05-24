@@ -1,11 +1,13 @@
 <?php
     $pageTitle = "VISITOR";
     include 'header.php';
-?>
+?>  <script>
+        alert("ERROR: All fields are required!")
+    </script>
     <center>
         <h1>Welcome, thanks for visiting</h1>
-        <div class="column">
         Please scan your QR Code
+        <div class="column">
             <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });

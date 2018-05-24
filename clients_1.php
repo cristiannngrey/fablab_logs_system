@@ -1,11 +1,14 @@
 <?php
-    $pageTitle = "VISITOR";
+    $pageTitle = "CLIENT";
     include 'header.php';
-?>
+?>  
+    <script>
+        alert("ERROR: All fields are required!");
+    </script>
     <center>
-        <h1>Welcome, thanks for visiting</h1>
+        <h1>How's your day?</h1>
         <div class="column">
-        Please scan your QR Code
+            Please scan your QR Code
             <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -22,22 +25,22 @@
                   console.error(e);
                 });
                 scanner.addListener('scan', function(content, image){
-                    var v_idnum = document.getElementById("v_idnum");
-                    v_idnum.value = content;
+                    var c_idnum = document.getElementById("c_idnum");
+                    c_idnum.value = content;
                 });
             </script>
         </div>
         <div class="column">
-            <form action="includes/v_process.php" method="POST">
+            <form action="includes/c_process.php" method="POST">
                 <p>
                     <label>QR Code ID:</label>
-                    <input type="text" id="v_idnum" name="v_idnum" readonly/>
+                    <input type="text" id="c_idnum" name="c_idnum" readonly/>
                     <br/>
-                    <label>Purpose of Visit:</label>
-                    <input type="text" id="v_purpose" name="v_purpose" />
+                    <label>Purpose:</label>
+                    <input type="text" id="c_purpose" name="c_purpose" />
                 </p>
                     <input type="submit" id="btn" value="  OK  " />
-                <p>                
+                <p>               
             </form>
         </div>
     </center>
