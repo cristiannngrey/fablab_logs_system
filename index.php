@@ -7,7 +7,7 @@
         Please select one:
         <div class="go_right">
             <a href="register.php">Register</a> |
-            <a href="admin.php">Admin</a>
+            <a href="login.php">Admin</a>
         </div>
         <br><hr><br><br>
         <center>
