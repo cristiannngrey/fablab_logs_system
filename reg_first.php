@@ -15,7 +15,7 @@
     <center><h2>YOU ARE NOT YET REGISTERED</h2></center>
     <div class="center">
         <center>
-            <a href="register.php"><img src="includes/register.jpg" alt="Register" height="200"></a><br/>
+           <p> <a href="register.php"><img src="includes/register.png" alt="Register" height="200"></a></p><br/>
             Register
         </center>
     </div>

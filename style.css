@@ -8,7 +8,7 @@
 header {
     width:  100%;
     height: 60px;
-    background-color: #222222;
+    background-color: #606060;
 }
 
 nav ul {
@@ -94,7 +94,7 @@ button_red {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     opacity: 0.9;
 }
 
