@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2018 at 08:57 AM
+-- Generation Time: May 24, 2018 at 10:25 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -48,6 +48,16 @@ CREATE TABLE `registration` (
   `contact_num` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registration` (`id`, `firstname`, `lastname`, `agency_address`, `contact_num`, `email`) VALUES
+(000001, 'Cristian', 'Hamoay', 'Holy Name University', '09072120539', 'cristian.hamoay@gmail.com'),
+(000002, 'Kim Leonard', 'Olaybar', 'Bohol Divers Resort, Danao, Panglao, Bohol', '09099441675', 'kimolaybar@gmail.com'),
+(000003, 'Ian Nicole', 'Reambonanza', 'Cortes', '09273984098', 'inreambonanza@gmail.com'),
+(000004, 'Ray Conner', 'Samson', 'Mabuhay Village, Dao District, Tagbilaran City', '09484655596', 'rayconnersamson@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -110,7 +120,7 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
