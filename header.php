@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	<link rel="stylesheet" href= "js/bootstrap.min"/>  
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<!--<link href="css/bootstrap.css" rel="stylesheet">-->
 	<link href="css/login-style.css" rel="stylesheet">
   	<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
   	<script src="js/jquery.min"></script>
@@ -26,7 +26,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.php"><img src="includes/logo.png" alt="FabLab Bohol" height="50"></a>
+			<li><a href="index.php"><img src="includes/logo.png" alt="FabLab Bohol" height="50"></a>
 			</li>
         </ul>
 		</div>

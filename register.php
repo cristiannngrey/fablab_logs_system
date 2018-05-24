@@ -1,4 +1,5 @@
 <?php
+	$pageTitle = "Register";
 	include 'header.php';
 ?>
 
@@ -30,9 +31,5 @@
 		</div>
 			
 	</div>
-	<div class="footer">
-		cRistian
-	</div>
-
 </body>
 </html>
