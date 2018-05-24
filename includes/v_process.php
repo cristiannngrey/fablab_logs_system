@@ -8,25 +8,31 @@
     $id_num = stripcslashes($id_num);
     $purpose = stripcslashes($purpose);
 
-    //connect to the server
-    $conn = new mysqli("localhost", "root", "", "fablab_logs_system");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-    
-    $sql_v = "SELECT * from registration where id = $id_num";
-    $result_v = $conn->query($sql_v);
-    $push_visitor = "INSERT INTO visitors (v_id, v_purpose, v_date) VALUES ($id_num, '$purpose', now())";
+    if(!empty($id_num) && !empty($purpose) ){
+        //connect to the server
+        $conn = new mysqli("localhost", "root", "", "fablab_logs_system");
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
+        
+        $sql_v = "SELECT * from registration where id = $id_num";
+        $result_v = $conn->query($sql_v);
+        $push_visitor = "INSERT INTO visitors (v_id, v_purpose, v_date) VALUES ($id_num, '$purpose', now())";
 
-    if ($result_v->num_rows > 0) {
-        // output data of each row
-        while($row = $result_v->fetch_assoc()) {
-            echo "Welcome ".$id_num;
-            $conn->query($push_visitor);
+        if ($result_v->num_rows > 0) {
+            // output data of each row
+            while($row = $result_v->fetch_assoc()) {
+                echo "Welcome ".$id_num;
+                $conn->query($push_visitor);
+            }
+            header("Location: ../succ_log.php");
+        } else {
+            header("Location: ../reg_first.php");
         }
-    } else {
-        header("Location: ../reg_first.php");
+        $conn->close();
     }
-    $conn->close();
+    else{
+        header("Location: ../visitors_1.php");
+    }
 ?>
     

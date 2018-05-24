@@ -1,12 +1,14 @@
 <?php
-    $pageTitle = "VISITOR";
+    $pageTitle = "USER";
     include 'header.php';
-?>
+?>  <script>
+        alert("ERROR: All fields are required!")
+    </script>
     <center>
-        <h1>Welcome, thanks for visiting</h1>
+        <h1>Hello, got some amazing ideas today?</h1><hr>
         <div class="column">
         Please scan your QR Code
-            <video id="preview"></video>
+        <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
                 scanner.addListener('scan', function (content) {
@@ -22,23 +24,26 @@
                   console.error(e);
                 });
                 scanner.addListener('scan', function(content, image){
-                    var v_idnum = document.getElementById("v_idnum");
-                    v_idnum.value = content;
+                    var u_idnum = document.getElementById("u_idnum");
+                    u_idnum.value = content;
                 });
             </script>
+            <form action="includes/u_process.php" method="POST">
         </div>
         <div class="column">
-            <form action="includes/v_process.php" method="POST">
-                <p>
-                    <label>QR Code ID:</label>
-                    <input type="text" id="v_idnum" name="v_idnum" readonly/>
-                    <br/>
-                    <label>Purpose of Visit:</label>
-                    <input type="text" id="v_purpose" name="v_purpose" />
-                </p>
-                    <input type="submit" id="btn" value="  OK  " />
-                <p>                
-            </form>
+            <p>
+                <label>QR Code ID:</label>
+                <input type="text" id="u_idnum" name="u_idnum" readonly />
+                <br/>
+                <label>Type of Machine Used:</label>
+                <input type="text" id="machine_used" name="machine_used" />
+                <br/>
+                <label>Project Title:</label>
+                <input type="text" id="project_title" name="project_title" />
+            </p>
+                <input type="submit" id="btn" value="  OK  " />
+            <p>                
+        </form>
         </div>
     </center>
 </body>

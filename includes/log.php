@@ -1,8 +1,6 @@
 <?php
 
     include '../dbh.php';
-
-
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $agency_address = $_POST['agency_address'];

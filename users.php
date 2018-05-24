@@ -2,20 +2,10 @@
     $pageTitle = "USER";
     include 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Users</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-</head>
-<body>
     <center>
-        <h1>Hello, got some amazing ideas today?</h1>
+        <h1>Hello, got some amazing ideas today?</h1><hr>
+        <div class="column">
         Please scan your QR Code
-        <div class="center">
         <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -31,13 +21,14 @@
                 }).catch(function (e) {
                   console.error(e);
                 });
-
                 scanner.addListener('scan', function(content, image){
                     var u_idnum = document.getElementById("u_idnum");
                     u_idnum.value = content;
                 });
-              </script>
+            </script>
             <form action="includes/u_process.php" method="POST">
+        </div>
+        <div class="column">
             <p>
                 <label>QR Code ID:</label>
                 <input type="text" id="u_idnum" name="u_idnum" readonly />
