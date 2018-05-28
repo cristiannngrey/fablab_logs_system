@@ -9,9 +9,9 @@
     $result = mysqli_query($connect, $get_v_details);
 ?>  
     <h2 align="center">Users Log</h2><br><hr> 
-    <div class = "container">
+    <div class = "container"> <!--
       <div class = "go_right1">
-        <form action="includes/u_date_condition.php">
+        <form action="includes/u_date_cond.php">
         View Logs of 
           <select name="month">
             <option value="jan">January</option>
@@ -43,7 +43,8 @@
           </select>
           <input type="submit" value="View">
         </form>
-      </div>
+      </div> --> 
+
       <table id="logs">
       <tr>
           <th>ID</th>  

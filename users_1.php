@@ -7,7 +7,7 @@
     <center>
         <h1>Hello, got some amazing ideas today?</h1><hr>
         <div class="column">
-        Please scan your QR Code
+        Please scan your QR Code 
         <video id="preview"></video>
             <script type='text/javascript'>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -42,7 +42,7 @@
                 <input type="text" id="project_title" name="project_title" />
             </p>
                 <input type="submit" id="btn" value="  OK  " />
-            <p>                
+            <p>
         </form>
         </div>
     </center>
