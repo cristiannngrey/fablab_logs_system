@@ -11,6 +11,7 @@
 		?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="includes/fab_icon.jpg" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 	<link rel="stylesheet" href= "js/bootstrap.min"/>  
 	<link href="css/login-style.css" rel="stylesheet">

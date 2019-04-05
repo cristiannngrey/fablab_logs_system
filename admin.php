@@ -1,7 +1,18 @@
 <?php
+    session_start();
     $pageTitle = "ADMIN";
-	include 'header.php';
+    include 'header.php';
+
 ?>
+<?php
+      if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+       {
+           header("Location: index.php");  
+       }
+?>
+    <div class="go_right">
+        <a href='includes/logout.php'> Logout</a>
+    </div>
     <div class="center">
         <center><h1>ADMIN</h1></center><br>
         <br><hr><br><br>
@@ -24,8 +35,5 @@
             </div>
         </center>
     </div>
-	<div class="footer">
-		cRstian
-	</div>
 </body>
 </html>

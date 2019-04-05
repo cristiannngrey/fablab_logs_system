@@ -4,7 +4,7 @@ $connect = mysqli_connect("localhost", "root", "", "fablab_logs_system");
 $output = '';
 if(isset($_POST["export"]))
 {
-    $get_v_details = "SELECT registration.*, users.u_purpose, users.u_date 
+    $get_v_details = "SELECT registration.*, users.u_machine_used, users.u_project_title, users.u_date 
         FROM registration AS registration 
         INNER JOIN users AS users 
         ON (registration.id = users.u_id);";  
@@ -21,7 +21,8 @@ if(isset($_POST["export"]))
             <th>Agency/Address</th>
             <th>Contact Number</th>  
             <th>Email Address</th>  
-            <th>Purpose of Visit</th>
+            <th>Machine Used</th>
+            <th>Project title</th>
             <th>Date</th>
         </tr>
     ';
@@ -35,7 +36,8 @@ if(isset($_POST["export"]))
             <td>'.$row["agency_address"].'</td>  
             <td>'.$row["contact_num"].'</td>
             <td>'.$row["email"].'</td>  
-            <td>'.$row["u_purpose"].'</td>  
+            <td>'.$row["u_machine_used"].'</td>
+            <td>'.$row["u_project_title"].'</td>  
             <td>'.$row["u_date"].'</td>
         </tr>
     ';
